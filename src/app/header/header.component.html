@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span><a routerLink='/' [ngStyle]="{color:'white',textDecoration:'none'}">Mean Stack</a></span>
+    <div class="spacer"></div>
+    <ul>
+      <li><a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+      <li><a mat-button [routerLink]="['posts','add']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Add New Post</a></li>
+      <li><a mat-button [routerLink]="['login']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Login</a></li>
+      <li><a mat-button [routerLink]="['signup']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Signup</a></li>
+    </ul>
+  </mat-toolbar-row>
+
+</mat-toolbar>

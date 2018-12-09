@@ -1,0 +1,29 @@
+<mat-card>
+  <form class="post-create"  (ngSubmit)="onPostCreate()" #postCreate='ngForm'>
+    <mat-form-field class="post-title">
+      <input 
+            matInput 
+            placeholder="Post Title" 
+            ngModel name='title' 
+            #titleInput='ngModel' 
+            required 
+            minlength='3' 
+            />
+    </mat-form-field>
+  
+    <mat-form-field class="post-content">
+      <textarea 
+              matInput 
+              placeholder="Post Content" 
+              ngModel 
+              name='content' 
+              #contentInput='ngModel' 
+              required 
+              minlength='5'
+              ></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type='submit' [disabled]="!postCreate.valid">Submit</button>
+  </form>
+  <mat-spinner *ngIf='isLoading'></mat-spinner>
+</mat-card>
